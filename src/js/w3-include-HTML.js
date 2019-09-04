@@ -1,8 +1,8 @@
 (function () {
 
-    myHTMLInclude();
-    
-    function myHTMLInclude() {
+   // myHTMLInclude();
+
+    /*function myHTMLInclude() {
       var z, i, a, file, xhttp;
       z = document.getElementsByTagName("*");
       for (i = 0; i < z.length; i++) {
@@ -24,5 +24,8 @@
         }
       }
     }
+*/
+})();
+
+   
     
-    })();

@@ -1,3 +1,6 @@
+.main-body{
+	margin-top:48px;	
+}
 .gallery-carousel__intro{
 
 	padding-bottom: 10px;
@@ -10,6 +13,7 @@
 .gallery-carousel .gallery-carousel__intro{
 		
 }
+
 @media(min-width: 767px){
 	.gallery-carousel {
 		margin-top:25px;

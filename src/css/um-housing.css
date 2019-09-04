@@ -1,0 +1,22 @@
+.gallery-carousel__intro{
+
+	padding-bottom: 10px;
+}
+.gallery-carousel {
+	margin-top: 0px;
+	overflow: hidden;
+	
+}
+.gallery-carousel .gallery-carousel__intro{
+		
+}
+@media(min-width: 767px){
+	.gallery-carousel {
+		margin-top:25px;
+		overflow: hidden;
+	}
+	.gallery-carousel .gallery-carousel__intro{
+		
+	}
+	
+}

@@ -1,3 +1,44 @@
+.icon-bar {
+	width: 22px; 
+	height: 2px;
+	background-color: #3852a4;
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+ 
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+ 
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+ 
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+ 
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+ 
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+button.navbar-toggler:focus{
+	outline: none;
+}
 .main-body{
 	margin-top:48px;	
 }
@@ -11,6 +52,7 @@ ul.navbar-nav .nav-item.active>a.nav-link:hover{
 ul.navbar-nav .nav-item.active>a.nav-link {
     text-decoration: none;
     position: relative;
+    display:inline-block;
 }
 ul.navbar-nav .nav-item.active>a.nav-link:after {
     content: '';
@@ -36,7 +78,7 @@ ul.navbar-nav .nav-item.active>a.nav-link:after {
 		
 }
 
-@media(min-width: 767px){
+@media(min-width: 768px){
 	.gallery-carousel {
 		margin-top:25px;
 		overflow: hidden;
@@ -44,5 +86,25 @@ ul.navbar-nav .nav-item.active>a.nav-link:after {
 	.gallery-carousel .gallery-carousel__intro{
 		
 	}
-	
+	.navbar-nav {
+	  display:table;
+	}
+	.navbar-nav >.nav-item{
+	  display:table-cell;
+	  text-align:center;
+	  vertical-align:middle;
+	}
+	.payment-logo{
+		max-width: 190px;
+	}
+}
+@media(min-width: 992px){
+	.payment-logo{
+		max-width: 100%;
+	}
+}
+@media(min-width: 1200px){
+	.navbar-nav >.nav-item{
+	  padding-right:20px;	  
+	}
 }

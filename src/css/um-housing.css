@@ -1,6 +1,28 @@
 .main-body{
 	margin-top:48px;	
 }
+ul.navbar-nav a.nav-link:hover{
+  color:orange!important;
+}
+
+ul.navbar-nav .nav-item.active>a.nav-link:hover{
+  color:initial!important;
+}
+ul.navbar-nav .nav-item.active>a.nav-link {
+    text-decoration: none;
+    position: relative;
+}
+ul.navbar-nav .nav-item.active>a.nav-link:after {
+    content: '';
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 5px;    
+    border-width: 0 0 1px;
+    border-style: solid;
+}
+
 .gallery-carousel__intro{
 
 	padding-bottom: 10px;

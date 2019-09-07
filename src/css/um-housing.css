@@ -21,7 +21,7 @@ main {
 
 
 
-.ariticle-body__wrap{
+.ariticle-body__wrap>.ariticle-body__wrap{
 	padding:1rem .5rem;	
 	margin-top: 25px;
     overflow: hidden;
@@ -30,7 +30,7 @@ main {
 
 
 .property-listing,
-.ariticle-body__wrap{
+.ariticle-body__wrap>.ariticle-body__wrap{
 	padding-bottom: 100px;
 }
 

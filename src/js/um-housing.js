@@ -84,8 +84,9 @@ function pageConstructor() {
   }
   const slider_main_Config = {
       dots: true,
+      autoplay: true,
       infinite: true,
-      speed: 300,
+      autoplaySpeed: 8000,
       slidesToShow: 1,
       arrows: false,
       adaptiveHeight: true

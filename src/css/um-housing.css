@@ -1,3 +1,58 @@
+
+
+
+/*Generic css*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+main {
+  min-height: 100%;
+}
+
+.footer__wrap {
+  	height: 60px;
+    margin-top: -60px;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 20px;
+}
+
+
+
+
+.ariticle-body__wrap{
+	padding:1rem .5rem;	
+	margin-top: 25px;
+    overflow: hidden;
+}
+
+
+
+.property-listing,
+.ariticle-body__wrap{
+	padding-bottom: 100px;
+}
+
+
+
+.ariticle-body__title{
+	display: inline-block;
+	padding-top:1rem;
+	padding-bottom:.5rem;
+}
+.ariticle-body__title-border{
+	border-bottom: 1px solid #dee2e6!important;
+}
+
+
+
+
+/*Navigation animation*/
+.navbar{
+	background-color: #eee;
+}
+
 .icon-bar {
 	width: 22px; 
 	height: 2px;
@@ -39,9 +94,7 @@
 button.navbar-toggler:focus{
 	outline: none;
 }
-.main-body{
-	margin-top:48px;	
-}
+
 ul.navbar-nav a.nav-link:hover{
   color:orange!important;
 }
@@ -64,6 +117,47 @@ ul.navbar-nav .nav-item.active>a.nav-link:after {
     border-width: 0 0 1px;
     border-style: solid;
 }
+
+@media(min-width: 1200px){
+	.navbar-nav >.nav-item{
+	  padding-right:20px;	  
+	}
+}
+
+@media(max-width: 767px){
+
+	.navbar-collapse {
+		padding-bottom: 20px;    
+	    padding-top: 10px;
+	}
+	.navbar-collapse>.navbar-nav {
+    	padding-bottom: 20px;
+	}
+}
+/*End of navigation customization*/
+
+.main-body{
+	margin-top:24px;	
+}
+.main-body__gallery-show{
+	margin-top:0px;
+}
+
+
+
+/*property listing page*/
+.property-list-tab__title{
+	margin:25px 0;
+}
+.property-list-tab__wrap{
+	padding:15px;
+}
+@media(min-width: 768px){
+	.property-list-tab__wrap{
+		padding:0px;
+	}
+}
+
 
 .gallery-carousel__intro{
 
@@ -103,8 +197,5 @@ ul.navbar-nav .nav-item.active>a.nav-link:after {
 		max-width: 100%;
 	}
 }
-@media(min-width: 1200px){
-	.navbar-nav >.nav-item{
-	  padding-right:20px;	  
-	}
-}
+
+

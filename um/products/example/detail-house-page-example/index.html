@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/carousel/ -->
-<svg lang="en" class="gr__getbootstrap_com">
-<!-- <div w3-include-html="./head.html"> </div> -->
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
-  <title>Carousel Template for Bootstrap</title>
+  <title>Um Housing</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
 
@@ -36,45 +31,15 @@
   <link href="/src/css/um-housing.css" rel="stylesheet">
 </head>
 
-<body data-gr-c-s-loaded="true">
-  <div w3-include-html="/header.html"> </div>
-
-  <main role="main">
-    <!-- Marketing messaging and featurettes
-      ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="marketing">
-      <div w3-include-html="./slider.html"> </div>
-      <div class="container">
-
-        <fieldset>
-          <legend> <strong>522 Monroe Street -- Available for May of 2020-21 </strong>
-          </legend>
-
-          
-              <div w3-include-html="./main.html"> </div>
-          
-
-        </fieldset>
-      </div>
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-    </div><!-- /.container -->
-
-
-    <!-- FOOTER -->
-    <div w3-include-html="/footer.html"> </div>
+<body data-gr-c-s-loaded="true"> 
+  <label id="pageGroup" class="hidden" data-page-group="Properties"></label> 
+  <header w3-include-html="/header.html"></header>
+  <main role="main" class="main-body">   
+    <div class="gallery-slider__wrap" w3-include-html="./slider.html"> </div>
+    <div class="generic-article__body" w3-include-html="./main.html"> </div>   
   </main>
+   <div class="footer__wrap" w3-include-html="/footer.html"> </div>
   <script src="/src/js/jquery.js"></script>
-
-
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -95,39 +60,6 @@
   <script src="/src/js/slick-1.8.1.js"></script>
   <!--  Custom Theme JavaScript  -->
   <script src="/src/js/um-housing.js?v=1.1"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      console.log($("#home-featured-carousel .slider-inner"));
-      $("#home-featured-carousel .slider-inner").slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        arrows: false,
-        adaptiveHeight: true
-      });
-    });
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      //Slick slider initialize
-      $('.gallery-slider__main-inner').slick({
-        autoplay: true,
-        autoplaySpeed: 111000,
-        pauseOnHover: true,
-        asNavFor: '.gallery-slider__thumbnail-inner'
-      });
-      $('.gallery-slider__thumbnail-inner').slick({
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        centerMode: false,
-        focusOnSelect: true,
-        arrows: false,
-        asNavFor: '.gallery-slider__main-inner'
-      });
-
-    })
-  </script>
 
 
   <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none"

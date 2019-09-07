@@ -92,7 +92,7 @@ function pageConstructor() {
   };
   const slider_gallery_main_Config = {
       autoplay: true,
-      autoplaySpeed: 111000,
+      autoplaySpeed: 8000,
       pauseOnHover: true,
       asNavFor: '.gallery-slider__thumbnail-inner'
   };

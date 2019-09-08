@@ -27,7 +27,11 @@ main {
     overflow: hidden;
 }
 
-
+.home-listing__intro{
+	margin-top:15px;
+	margin-bottom:15px;
+	padding:0 10px;
+}
 
 .property-listing,
 .ariticle-body__wrap{
@@ -57,6 +61,14 @@ main {
 	padding-top:1rem;
 }
 
+/*Home page propery listing*/
+.property-listing .home-listing__item{
+	text-align: center;
+	margin-top:15px;
+}
+.property-listing .home-listing__images{
+	min-width: 150px;
+}
 
 /*Navigation animation*/
 .navbar{

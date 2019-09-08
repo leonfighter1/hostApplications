@@ -304,7 +304,7 @@
 }
 @media(min-width: 992px){
     .gallery-slider__main >.slick-slider{
-        height:500px;
+        height:700px;
     }
 
 }

@@ -16,7 +16,7 @@
                 contact and set up an appointment for finalizing the lease and/or reservation of the property. If you
                 have any questions, you can contact PTP Management at (734) 657-2096 or via e-mail: info@um-housing.com.
         </p>
-        <form>
+        <form method="POST" action="/cgi-bin/um.pl">
                 <fieldset>
                         <legend class="mb-3">Please select property location</legend>
                         <div class="form-row">
@@ -68,7 +68,7 @@
                                         <label>First Name</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="firstname">
+                                        <input type="text" class="form-control" name="realname">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -76,7 +76,7 @@
                                         <label>Last Name</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="lastname">
+                                        <input type="text" class="form-control" name="Lastname">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -84,7 +84,7 @@
                                         <label>Phone Number</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="phonenumber">
+                                        <input type="text" class="form-control" name="Phone">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -93,7 +93,7 @@
 
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="address">
+                                        <input type="text" class="form-control" name="localaddress">
 
                                 </div>
                         </div>
@@ -103,7 +103,7 @@
 
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="city">
+                                        <input type="text" class="form-control" name="localcity">
 
                                 </div>
                         </div>
@@ -113,7 +113,7 @@
 
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="state">
+                                        <input type="text" class="form-control" name="localstate">
 
                                 </div>
                         </div>
@@ -123,7 +123,7 @@
 
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="zip">
+                                        <input type="text" class="form-control" name="localzipcode">
 
                                 </div>
                         </div>
@@ -133,7 +133,7 @@
 
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="dob">
+                                        <input type="text" class="form-control" name="DateofBirth">
 
                                 </div>
                         </div>
@@ -155,7 +155,7 @@
                                         <label>Name/address of saving account bank</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="savingaccount">
+                                        <input type="text" class="form-control" name="Savingaccount">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -163,7 +163,7 @@
                                         <label>Name/address of checking account bank</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="checkingaccount">
+                                        <input type="text" class="form-control" name="Checkingaccount">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -171,7 +171,7 @@
                                         <label>List credit cards</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="listcreditcard">
+                                        <input type="text" class="form-control" name="listcreditcards">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -179,7 +179,11 @@
                                         <label>Have you been evicted?</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="explaineveict">
+                                        <input type="radio" name="evicated" value="no">
+                                         No &nbsp;&nbsp;&nbsp;&nbsp;
+                                         <input type="radio" name="evicated" value="yes">
+                                          Yes &nbsp;&nbsp;&nbsp;&nbsp; Explaine 
+                                          <input type="text" class="form-control" name="explaineveict">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -187,6 +191,10 @@
                                         <label>Have you broken a lease?</label>
                                 </div>
                                 <div class="col">
+                                                <input type="radio" name="brokenalease" value="no">
+                                                No &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="brokenalease" value="yes">
+                                                 Yes &nbsp;&nbsp;&nbsp;&nbsp; Explaine 
                                         <input type="text" class="form-control" name="explainbrokenlease">
                                 </div>
                         </div>
@@ -195,6 +203,10 @@
                                         <label>Have you committed a misdemeanor?</label>
                                 </div>
                                 <div class="col">
+                                                <input type="radio" name="misdemeanor" value="no">
+                                                No &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="misdemeanor" value="yes">
+                                                 Yes &nbsp;&nbsp;&nbsp;&nbsp; Explaine 
                                         <input type="text" class="form-control" name="explainmisdemeanor">
                                 </div>
                         </div>
@@ -218,7 +230,7 @@
                                         <label>Last Name</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="cosignerlastnmae">
+                                        <input type="text" class="form-control" name="cosignerLastnmae">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -226,7 +238,7 @@
                                         <label>Phone Number</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="cosignerphone">
+                                        <input type="text" class="form-control" name="cosignerPhone">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -258,7 +270,7 @@
                                         <label>Zip Code</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="cosignerzip">
+                                        <input type="text" class="form-control" name="cosignerzipcode">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -266,7 +278,7 @@
                                         <label>Employer</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="cosigneremployer">
+                                        <input type="text" class="form-control" name="Employer">
                                 </div>
                         </div>
                         <div class="form-row mb-2">
@@ -274,7 +286,7 @@
                                         <label>Occupation</label>
                                 </div>
                                 <div class="col">
-                                        <input type="text" class="form-control" name="cosigneroccupation">
+                                        <input type="text" class="form-control" name="Occupation">
                                 </div>
                         </div>
 

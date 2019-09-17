@@ -95,6 +95,9 @@ function getContentFromFile(){
                     case "date":
                      $this.html(unit.availability);
                     break;
+                    case "status":
+                     $this.html(unit.status);
+                    break;
                     case "address":
                      $this.html(property.property_address);
                     break;

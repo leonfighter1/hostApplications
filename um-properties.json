@@ -6,14 +6,22 @@
         "units": [
           {
             "unit_number": "1",
-            "unit_price": "5522",
-            "availability": "May 20th 2019"
+            "unit_price": "5195",
+            "status":"Available for",
+            "availability": "May 2020-21"            
           },
           {
             "unit_number": "2",
-            "unit_price": "5199",
-            "availability": "May 20th 2020"
-          }
+            "unit_price": "5295",
+            "status":"Available for",
+            "availability": "Sep 2020-21"            
+          },
+          {
+            "unit_number": "3",
+            "unit_price": "5295",
+            "status":"Available for",
+            "availability": "Sep 2020-21"    
+          }       
         ]
       },
       {
@@ -23,7 +31,8 @@
           {
             "unit_number": "1",
             "unit_price": "5212",
-            "availability": "May 20th 2022"
+            "status":"Available for",
+            "availability": "Sep 2020-21"           
           }
         ]
       }

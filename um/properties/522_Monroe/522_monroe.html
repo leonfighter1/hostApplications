@@ -36,35 +36,31 @@
 <body data-gr-c-s-loaded="true">
   <label id="pageGroup" class="hidden" data-page-group="Properties"></label> 
   <header w3-include-html="/header.html"></header>
-  <main role="main" class="main-body">   
-    <div class="gallery-slider__wrap" w3-include-html="./slider.html"> </div>
-    <div class="container property-list-tab__wrap">   
+  <main role="main" class="main-body">
+    <div class="container property-list-tab__wrap ariticle-body__wrap">   
           <div class="property-list-tab__title text-danger">
               <strong>522 Monroe Street -- Available for May of 2020-21 </strong>
-          </div>
+          </div>          
           <!-- Bootstrap CSS -->
           <!-- Nav tabs -->
           <ul class="nav nav-tabs property-list-tab__tabs" role="tablist">
               <li class="nav-item">
-                  <a class="nav-link active" href="#main1" role="tab" data-toggle="tab">Details</a>
+                  <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Details</a>
               </li>
+             
               <li class="nav-item">
-                  <a class="nav-link" href="#main2" role="tab" data-toggle="tab">Apt 2</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#main3" role="tab" data-toggle="tab">Apt 3</a>
+                  <a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Google Map</a>
               </li>
           </ul>
           <!-- Tab panes -->
-          <div class="tab-content ariticle-body__wrap">
-              <div role="tabpanel" class="tab-pane fade show active" id="main1">
-                  <div w3-include-html="./main.html"> </div>
+          <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade show active" id="tab1">
+                  <div w3-include-html="./main_description.html"> </div>
+                  <div class="bottom-adjustment" w3-include-html="./detail.html"> </div>
               </div>
-              <div role="tabpanel" class="tab-pane fade" id="main2">
-                  <div w3-include-html="./main.html"> </div>
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="main3">
-                  <div w3-include-html="./main.html"> </div>
+             
+              <div role="tabpanel" class="tab-pane fade" id="tab2">
+                  <div class="bottom-adjustment" w3-include-html="./media.html"> </div>
               </div>
           </div>
       

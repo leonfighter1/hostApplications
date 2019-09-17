@@ -57,7 +57,7 @@ function resetNav(){
 }
 function renderSlider(selector, config) {
     $(selector).on('init', function (event, slick) { }).slick(config).on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-        console.log("before slider");
+        //console.log("before slider");
     });
 }
 function isSliderInTab(sliderSelector){
@@ -70,6 +70,53 @@ function isSliderInTab(sliderSelector){
       return false;
     }
   });
+}
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
+function getContentFromFile(){
+  $.getJSON('/um-properties.json',function(jsonData){
+     $("span").each(function(){
+       if(typeof $(this).data("propertyKey")!=='undefined'){
+         var currentKey = $(this).data("propertyKey");
+         var unit_number = typeof $(this).data("propertyUnit") =='undefined'?1:$(this).data("propertyUnit");
+         var span_display_type = typeof $(this).data("displayType") =='undefined'? "":$(this).data("displayType");
+         var $this = $(this);    
+         var unit_price = -1;
+         $.each(jsonData.all_properties,function(index,property){       
+            if(property.property_key == currentKey){
+              $.each(property.units,function(key,unit){            
+                if(unit_number == unit.unit_number){                  
+                  switch(span_display_type){
+                    case "price":
+                    $this.html("$"+formatNumber(unit.unit_price));
+                    break;
+                    case "date":
+                     $this.html(unit.availability);
+                    break;
+                    case "address":
+                     $this.html(property.property_address);
+                    break;
+                    default:
+                    $this.html("<span style='color:red'>[!!!!display type configuration error!!!!]</span>");               
+                    break;
+                  }
+                }
+              })
+            }           
+         })
+       }
+       if(typeof $(this).data("resourceKey")!=='undefined'){
+         var that = $(this);
+         $.each(jsonData.shared_text_resource,function(key,text){  
+            if(key===that.data("resourceKey")){
+              that.html(text);
+            }           
+         });
+       }
+     })
+  }); 
 }
 
 function pageConstructor() {
@@ -126,18 +173,23 @@ function pageConstructor() {
           }
       ]
   };
+
+  var isSliderInitialized = false;
   //homepage slider
   renderSlider("#home-featured-carousel .slider-inner", slider_main_Config);
   /*detail page slider render*/
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var target = $(e.target).attr("href") // activated tab
-    if($(target).find(".gallery-carousel").length>0){
+    if($(target).find(".gallery-carousel").length>0&&!isSliderInitialized){
       renderSlider(".gallery-slider__main-inner", slider_gallery_main_Config);
       renderSlider(".gallery-slider__thumbnail-inner", slider_gallery_thumbnail_Config);
+      isSliderInitialized = true;
     }
   });
-
   resetNav();
+
+  getContentFromFile();
+
 }
 
 $(window).on("load", function () {

@@ -1,0 +1,36 @@
+{
+    "all_properties": [
+      {
+        "property_key": "522_monroe",
+        "property_address": "522 monroe",
+        "units": [
+          {
+            "unit_number": "1",
+            "unit_price": "5522",
+            "availability": "May 20th 2019"
+          },
+          {
+            "unit_number": "2",
+            "unit_price": "5199",
+            "availability": "May 20th 2020"
+          }
+        ]
+      },
+      {
+        "property_key": "1111_michigan",
+        "property_address": "1111 michigan",
+        "units": [
+          {
+            "unit_number": "1",
+            "unit_price": "5212",
+            "availability": "May 20th 2022"
+          }
+        ]
+      }
+    ],
+  "shared_text_resource": {
+    "key_1": "Hello World!",
+    "key_2": "Nice!",
+    "key_3":"see you tomorrow!"
+  }
+}

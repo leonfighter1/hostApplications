@@ -59,14 +59,30 @@ main {
 /*Home page propery listing*/
 .property-listing .home-listing__item{
 	text-align: center;
+	padding:0px;
+	border:1px solid #cecece;
 	margin-top:15px;
-	padding-left: 10px;
-	padding-right: 10px;
 }
-.property-listing .home-listing__item-wrap{
+@media(min-width: 576px){
+	.property-listing .row{
+		justify-content: space-between;
+	}
+	.property-listing .home-listing__item{
+		    flex: 0 0 48.8%;
+	}
+}
+@media(min-width: 768px){
+	.property-listing .home-listing__item{
+		    flex: 0 0 32.5%;
+	}
+}
+
+
+
+.property-listing .home-listing__item{
 		transition: .15s linear all;
 }
-.property-listing .home-listing__item-wrap:hover{
+.property-listing .home-listing__item:hover{
 	-webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.4);
 	-moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.4);
 	box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.4);
@@ -75,11 +91,12 @@ main {
 	width:100%;
 }
 .property-listing .home-listing__intro{
-	border: 1px solid #cecece;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	
+	padding:20px 10px;
 }
-
+.home-listing__intro{
+	font-size: 23px;
+}	
 
 /*Navigation animation*/
 .navbar{
